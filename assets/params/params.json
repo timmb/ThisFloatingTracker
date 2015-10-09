@@ -1,0 +1,133 @@
+
+{
+	"ControlPoints" : 
+	{
+		"ControlPoint::sDynamicControlInputDecay.get()" : 0.5000500082969666,
+		"ControlPoint::sDynamicControlPeakDecay.get()" : 0.09578990191221237,
+		"ControlPoint::sDynamicControlScaleAccel.get()" : 2.0,
+		"ControlPoint::sDynamicControlScaleSpeed.get()" : 1.019999980926514,
+		"ControlPoint::sDynamicControlWindowSize.get()" : 4,
+		"ControlPoint::sEnableFilter" : true,
+		"ControlPoint::sFilterAlpha" : 0.4000000059604645,
+		"ControlPoint::sFilterBeta" : 0.50,
+		"ControlPoint::sMeasurementNoise" : 10.0,
+		"ControlPoint::sPersistence" : 8,
+		"ControlPoint::sProcessNoiseAcc" : 5.0,
+		"ControlPoint::sProcessNoisePos" : 0.3000000119209290,
+		"ControlPoint::sProcessNoiseVel" : 3.50,
+		"ControlPoint::sReluctance" : 3,
+		"ControlPoint::sScaleKalmanSpeed" : 0.004000000189989805,
+		"ControlPoint::sTrendDecay" : 0.0,
+		"mControlPointClusterSize" : 0.05000000074505806,
+		"mControlPointDistanceThreshold" : 3500.0,
+		"mControlPointVelocityPruneThreshold" : 1.480002999305725,
+		"mDistanceCenter" : 2.599999904632568,
+		"mDistancePruneThreshold" : 0.6999999880790710,
+		"mDrawControlPoints2d" : true,
+		"mDrawControlPoints3d" : false,
+		"mDrawDynamicAccel" : false,
+		"mDrawDynamicSpeed" : false,
+		"mDrawEstimatedControlPoints" : false,
+		"mDrawInactiveControlPoints" : false,
+		"mDrawKalmanSpeed" : false,
+		"mDrawRawControlPointClusters" : false,
+		"mDrawRawControlPoints" : false,
+		"mDrawUntransformedControlPoints" : false,
+		"mIncreaseHeightFromDistanceAndScale" : 160.0,
+		"mMaxNumControlPoints" : 40,
+		"mScaleFlowInEstimate" : 10.0,
+		"mUseClosestPointOfClusterAsObservation" : false,
+		"mUseEstimatedPositions" : true,
+		"scaleFromUserCentroid" : 1.0
+	},
+	"Flow" : 
+	{
+		"mDrawFlow" : false,
+		"mDrawRawFlow" : false,
+		"mFlowDrawScale" : 10.0,
+		"mFlowMaxLength" : 10.0,
+		"mFlowMinLength" : 0.0,
+		"mFlowMovingAverage.mNumSamples" : 80,
+		"mFlowPreBlur" : 2,
+		"mFlowPreResize.x" : 120,
+		"mFlowPreResize.y" : 90
+	},
+	"Input" : 
+	{
+		"mConnectionThreshold" : 0.0,
+		"mContourBodyAveragePeriod" : 0,
+		"mContourSmoothEpsilon" : 1.0,
+		"mDrawBodyIndex" : false,
+		"mDrawContourAveragedBodyIndex" : false,
+		"mDrawContours" : false,
+		"mDrawDepth" : false,
+		"mDrawMaskedDepth8u" : false,
+		"mDrawRawContours" : false,
+		"mDrawShapes" : false,
+		"mDrawSmoothedContourAngles" : false,
+		"mEnableContourShapes" : false,
+		"mKinectRenderArea.x1" : -1.0,
+		"mKinectRenderArea.x2" : 1.0,
+		"mKinectRenderArea.y1" : -1.0,
+		"mKinectRenderArea.y2" : 1.0,
+		"mMaxShapes" : 10,
+		"mMaxSkeletons" : 6,
+		"mMinContourArea" : 1.0,
+		"mMinCornerAngle" : 0.50,
+		"mMinShapeExtent" : 0.90,
+		"mMinTerminationAngle" : 1.0,
+		"mPreContourDilationAmount" : 1,
+		"mProjectionWallDistance" : 6.0,
+		"mSkeletonSmoothingEpsilon" : 1.0,
+		"mSkeletonsPreciseProcess" : true
+	},
+	"OscTransmitter" : 
+	{
+		"mDestinationPort" : 2326,
+		"mIsEnabled" : true,
+		"mSendCentroid" : true,
+		"mSendControlPoints" : true,
+		"mSendExtents" : true,
+		"mSendQom" : true
+	},
+	"Profiler" : 
+	{
+		"Enable profiler" : false
+	},
+	"Rendering" : 
+	{
+		"Debug display" : true,
+		"Draw FPS" : true,
+		"Render target height" : 1000,
+		"Render target width" : 1000
+	},
+	"Selected sketch" : 1,
+	"Show" : 
+	{
+		"Fade change duration" : 0.7213232517242432,
+		"Fade change max duration" : 20.0,
+		"Mute OSC errors" : false
+	},
+	"SkeletonFinder" : 
+	{
+		"mDrawThinnedImage" : true
+	},
+	"UserStatsCalculator" : 
+	{
+		"Graph_MDC" : false,
+		"Graph_QoM" : false,
+		"Graph_QoM pre-filter" : false,
+		"Graph_QoM with decay" : false,
+		"mDrawDifferenceImage" : false,
+		"mMaskedDepthMovingAverage.mNumSamples" : 4,
+		"mMdcLowerBound" : 0.2000000029802322,
+		"mMdcUpperBound" : 0.50,
+		"mQomFilterHasAccel" : true,
+		"mQomFilterHasVel" : true,
+		"mQomFilterMeasurementVariance" : 3.0,
+		"mQomFilterProcessVariance" : 0.001000000047497451,
+		"mQomLowerBound" : 100000.0,
+		"mQomUpperBound" : 70000000.0,
+		"mQomWithDecayDownwardFilterAlpha" : 0.07999999821186066
+	}
+}

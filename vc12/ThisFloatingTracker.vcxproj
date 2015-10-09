@@ -1,0 +1,321 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{02A2BE70-FAD9-45DE-8E85-51C8C462E0C0}</ProjectGuid>
+    <RootNamespace>ThisFloatingTracker</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\include;..\..\Cinder\include;..\..\Cinder\boost;..\..\Cinder\blocks\Cairo\include;..\..\Cinder\blocks\Cairo\include\msw</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;WIN32;_DEBUG;_WINDOWS;NOMINMAX;_WIN32_WINNT=0x0502;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>"..\..\..\Programming\Cinder\include";..\include</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>cinder_d.lib;%(AdditionalDependencies);..\..\Cinder\blocks\Cairo\lib\msw\cairo-static.lib;..\..\Cinder\blocks\Cairo\lib\msw\pixman-1.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\..\Cinder\lib;..\..\Cinder\lib\msw</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention />
+      <TargetMachine>MachineX86</TargetMachine>
+      <IgnoreSpecificDefaultLibraries>LIBCMT;LIBCPMT</IgnoreSpecificDefaultLibraries>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\src;..\include;..\..\Cinder\include;..\..\HarmonicMotion\lib\boost;REMOVED..\..\Cinder\boost;..\..\Cinder\blocks\Cairo\include;..\..\Cinder\blocks\Cairo\include\msw;..\..\Cinder\blocks\OSC\src;..\lib\KCB2\src;..\lib\KCB2\lib;$(KINECTSDK20_DIR)/inc;..\lib\Cinder-OpenCV\include;..\lib\opencv;..\lib\Gist\src;..\lib\Gist\libs\kiss_fft130;C:\Program Files\PerfKit_4.1.0.14260\inc;..\lib\Cinder-MIDI\src;..\lib\Cinder-MIDI\include;..\lib\Cinder-MIDI\libs</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>__WINDOWS_MM__;_CRT_SECURE_NO_WARNINGS;SM_NVIDIA_PERFORMANCE_KIT;WIN32;USE_KISS_FFT;_DEBUG;__RTMIDI_DEBUG__;_WINDOWS;NOMINMAX;_WIN32_WINNT=0x0502;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <MinimalRebuild>false</MinimalRebuild>
+      <DisableSpecificWarnings>4305;4244;4267;4101</DisableSpecificWarnings>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+    </ClCompile>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>"..\..\..\Programming\Cinder\include";..\include</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>cinder-v120_d.lib;%(AdditionalDependencies);kcbv2.lib;$(KINECTSDK20_DIR)/lib/$(PlatformTarget)/kinect20.lib;$(KINECTSDK20_DIR)/lib/$(PlatformTarget)/Kinect20.Face.lib;opencv_calib3d249d.lib;opencv_core249d.lib;opencv_imgproc249d.lib;opencv_features2d249d.lib;opencv_flann249d.lib;opencv_video249d.lib;opencv_photo249d.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\lib\KCB2\lib\x64;REMOVED..\..\Cinder\lib;REMOVED..\..\Cinder\lib\msw\$(PlatformTarget);..\..\Cinder\blocks\Cairo\lib\msw\$(PlatformTarget);..\..\HarmonicMotion\lib\lib\windows\x64;..\lib\fftw</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <IgnoreSpecificDefaultLibraries>LIBCMT</IgnoreSpecificDefaultLibraries>
+      <IgnoreAllDefaultLibraries>
+      </IgnoreAllDefaultLibraries>
+    </Link>
+    <PostBuildEvent>
+      <Command>xcopy /y "..\lib\KCB2\lib\$(PlatformTarget)\KCBv2.dll" "$(TargetDir)" &amp; xcopy /y "$(KINECTSDK20_DIR)Redist\Face\$(PlatformTarget)\Kinect20.Face.dll" "$(TargetDir)"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\include;..\..\Cinder\include;..\..\Cinder\boost;..\..\Cinder\blocks\Cairo\include;..\..\Cinder\blocks\Cairo\include\msw</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;_WINDOWS;NOMINMAX;_WIN32_WINNT=0x0502;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ProjectReference>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+    </ProjectReference>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>"..\..\..\Programming\Cinder\include";..\include</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>cinder.lib;%(AdditionalDependencies);..\..\Cinder\blocks\Cairo\lib\msw\cairo-static.lib;..\..\Cinder\blocks\Cairo\lib\msw\pixman-1.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\..\Cinder\lib;..\..\Cinder\lib\msw</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <GenerateMapFile>true</GenerateMapFile>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding />
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention />
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\src;..\include;..\..\Cinder\include;..\..\HarmonicMotion\lib\boost;REMOVED..\..\Cinder\boost;..\..\Cinder\blocks\Cairo\include;..\..\Cinder\blocks\Cairo\include\msw;..\..\Cinder\blocks\OSC\src;..\lib\KCB2\src;..\lib\KCB2\lib;$(KINECTSDK20_DIR)/inc;..\lib\Cinder-OpenCV\include;..\lib\opencv;..\lib\Gist\src;..\lib\Gist\libs\kiss_fft130;C:\Program Files\PerfKit_4.1.0.14260\inc;..\lib\Cinder-MIDI\src;..\lib\Cinder-MIDI\include;..\lib\Cinder-MIDI\libs</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>__WINDOWS_MM__;_CRT_SECURE_NO_WARNINGS;SM_NVIDIA_PERFORMANCE_KIT;WIN32;USE_KISS_FFT;NDEBUG;_WINDOWS;NOMINMAX;_WIN32_WINNT=0x0502;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <MinimalRebuild>false</MinimalRebuild>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+      <DisableSpecificWarnings>4305;4244;4267;4101</DisableSpecificWarnings>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+    </ClCompile>
+    <ProjectReference>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+    </ProjectReference>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>"..\..\..\Programming\Cinder\include";..\include</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>cinder-v120.lib;%(AdditionalDependencies);kcbv2.lib;$(KINECTSDK20_DIR)/lib/$(PlatformTarget)/kinect20.lib;$(KINECTSDK20_DIR)/lib/$(PlatformTarget)/Kinect20.Face.lib;opencv_calib3d249.lib;opencv_core249.lib;opencv_imgproc249.lib;opencv_features2d249.lib;opencv_flann249.lib;opencv_video249.lib;opencv_photo249.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\lib\KCB2\lib\x64;REMOVED..\..\Cinder\lib;REMOVED..\..\Cinder\lib\msw\$(PlatformTarget);..\..\Cinder\blocks\Cairo\lib\msw\$(PlatformTarget);..\..\HarmonicMotion\lib\lib\windows\x64;..\lib\fftw</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <GenerateMapFile>true</GenerateMapFile>
+      <SubSystem>Console</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>
+      </EnableCOMDATFolding>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <IgnoreAllDefaultLibraries>
+      </IgnoreAllDefaultLibraries>
+      <IgnoreSpecificDefaultLibraries>LIBCMT</IgnoreSpecificDefaultLibraries>
+      <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
+    </Link>
+    <PostBuildEvent>
+      <Command>xcopy /y "..\lib\KCB2\lib\$(PlatformTarget)\KCBv2.dll" "$(TargetDir)" &amp; xcopy /y "$(KINECTSDK20_DIR)Redist\Face\$(PlatformTarget)\Kinect20.Face.dll" "$(TargetDir)"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Resources.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Cinder\blocks\OSC\src\ip\IpEndpointName.cpp" />
+    <ClCompile Include="..\..\Cinder\blocks\OSC\src\ip\win32\NetworkingUtils.cpp" />
+    <ClCompile Include="..\..\Cinder\blocks\OSC\src\ip\win32\UdpSocket.cpp" />
+    <ClCompile Include="..\..\Cinder\blocks\OSC\src\OscBundle.cpp" />
+    <ClCompile Include="..\..\Cinder\blocks\OSC\src\OscListener.cpp" />
+    <ClCompile Include="..\..\Cinder\blocks\OSC\src\OscMessage.cpp" />
+    <ClCompile Include="..\..\Cinder\blocks\OSC\src\OscSender.cpp" />
+    <ClCompile Include="..\..\Cinder\blocks\OSC\src\osc\OscOutboundPacketStream.cpp" />
+    <ClCompile Include="..\..\Cinder\blocks\OSC\src\osc\OscPrintReceivedElements.cpp" />
+    <ClCompile Include="..\..\Cinder\blocks\OSC\src\osc\OscReceivedElements.cpp" />
+    <ClCompile Include="..\..\Cinder\blocks\OSC\src\osc\OscTypes.cpp" />
+    <ClCompile Include="..\lib\Cinder-MIDI\libs\RtMidi.cpp" />
+    <ClCompile Include="..\lib\Cinder-MIDI\src\MidiHub.cpp" />
+    <ClCompile Include="..\lib\Cinder-MIDI\src\MidiIn.cpp" />
+    <ClCompile Include="..\lib\Cinder-MIDI\src\MidiMessage.cpp" />
+    <ClCompile Include="..\lib\Cinder-MIDI\src\MidiOut.cpp" />
+    <ClCompile Include="..\lib\KCB2\src\Kinect2.cpp" />
+    <ClCompile Include="..\src\Common.cpp" />
+    <ClCompile Include="..\src\Globals.cpp" />
+    <ClCompile Include="..\src\input\ControlPoint.cpp" />
+    <ClCompile Include="..\src\input\ControlPointTracker.cpp" />
+    <ClCompile Include="..\src\input\Input.cpp" />
+    <ClCompile Include="..\src\input\KinectInput.cpp" />
+    <ClCompile Include="..\src\input\OpticalFlow.cpp" />
+    <ClCompile Include="..\src\input\SkeletonFinder.cpp" />
+    <ClCompile Include="..\src\input\Thinner.cpp" />
+    <ClCompile Include="..\src\input\UserStats.cpp" />
+    <ClCompile Include="..\src\OscReceiver.cpp" />
+    <ClCompile Include="..\src\OscTransmitter.cpp" />
+    <ClCompile Include="..\src\Params.cpp" />
+    <ClCompile Include="..\src\Shader.cpp" />
+    <ClCompile Include="..\src\ShaderPipeline.cpp" />
+    <ClCompile Include="..\src\sound\MidiSender.cpp" />
+    <ClCompile Include="..\src\ThisFloatingTrackerApp.cpp" />
+    <ClCompile Include="..\src\ui\Grapher.cpp" />
+    <ClCompile Include="..\src\ui\KinectAligner.cpp" />
+    <ClCompile Include="..\src\utils\DynamicControlCalculator.cpp" />
+    <ClCompile Include="..\src\utils\KalmanFilter.cpp" />
+    <ClCompile Include="..\src\utils\Profiler.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Cinder\blocks\OSC\src\ip\IpEndpointName.h" />
+    <ClInclude Include="..\..\Cinder\blocks\OSC\src\ip\NetworkingUtils.h" />
+    <ClInclude Include="..\..\Cinder\blocks\OSC\src\ip\PacketListener.h" />
+    <ClInclude Include="..\..\Cinder\blocks\OSC\src\ip\TimerListener.h" />
+    <ClInclude Include="..\..\Cinder\blocks\OSC\src\ip\UdpSocket.h" />
+    <ClInclude Include="..\..\Cinder\blocks\OSC\src\OscArg.h" />
+    <ClInclude Include="..\..\Cinder\blocks\OSC\src\OscBundle.h" />
+    <ClInclude Include="..\..\Cinder\blocks\OSC\src\OscListener.h" />
+    <ClInclude Include="..\..\Cinder\blocks\OSC\src\OscMessage.h" />
+    <ClInclude Include="..\..\Cinder\blocks\OSC\src\OscSender.h" />
+    <ClInclude Include="..\..\Cinder\blocks\OSC\src\osc\MessageMappingOscPacketListener.h" />
+    <ClInclude Include="..\..\Cinder\blocks\OSC\src\osc\OscException.h" />
+    <ClInclude Include="..\..\Cinder\blocks\OSC\src\osc\OscHostEndianness.h" />
+    <ClInclude Include="..\..\Cinder\blocks\OSC\src\osc\OscOutboundPacketStream.h" />
+    <ClInclude Include="..\..\Cinder\blocks\OSC\src\osc\OscPacketListener.h" />
+    <ClInclude Include="..\..\Cinder\blocks\OSC\src\osc\OscPrintReceivedElements.h" />
+    <ClInclude Include="..\..\Cinder\blocks\OSC\src\osc\OscReceivedElements.h" />
+    <ClInclude Include="..\..\Cinder\blocks\OSC\src\osc\OscTypes.h" />
+    <ClInclude Include="..\include\Resources.h" />
+    <ClInclude Include="..\lib\Cinder-MIDI\include\MidiConstants.h" />
+    <ClInclude Include="..\lib\Cinder-MIDI\include\MidiExceptions.h" />
+    <ClInclude Include="..\lib\Cinder-MIDI\include\MidiHub.h" />
+    <ClInclude Include="..\lib\Cinder-MIDI\include\MidiIn.h" />
+    <ClInclude Include="..\lib\Cinder-MIDI\include\MidiMessage.h" />
+    <ClInclude Include="..\lib\Cinder-MIDI\include\MidiOut.h" />
+    <ClInclude Include="..\lib\Cinder-MIDI\libs\RtError.h" />
+    <ClInclude Include="..\lib\Cinder-MIDI\libs\RtMidi.h" />
+    <ClInclude Include="..\lib\KCB2\lib\KCBv2Lib.h" />
+    <ClInclude Include="..\lib\KCB2\src\Kinect2.h" />
+    <ClInclude Include="..\src\Common.h" />
+    <ClInclude Include="..\src\Globals.h" />
+    <ClInclude Include="..\src\input\Contour.h" />
+    <ClInclude Include="..\src\input\ControlPoint.h" />
+    <ClInclude Include="..\src\input\ControlPointTracker.h" />
+    <ClInclude Include="..\src\input\Filter.h" />
+    <ClInclude Include="..\src\input\Input.h" />
+    <ClInclude Include="..\src\input\KinectInput.h" />
+    <ClInclude Include="..\src\input\OpticalFlow.h" />
+    <ClInclude Include="..\src\input\Predictor.h" />
+    <ClInclude Include="..\src\input\SkeletonFinder.h" />
+    <ClInclude Include="..\src\input\Thinner.h" />
+    <ClInclude Include="..\src\input\UserStats.h" />
+    <ClInclude Include="..\src\OscReceiver.h" />
+    <ClInclude Include="..\src\OscTransmitter.h" />
+    <ClInclude Include="..\src\Params.h" />
+    <ClInclude Include="..\src\Shader.h" />
+    <ClInclude Include="..\src\ShaderPipeline.h" />
+    <ClInclude Include="..\src\Sketch.h" />
+    <ClInclude Include="..\src\sound\MidiSender.h" />
+    <ClInclude Include="..\src\ui\Grapher.h" />
+    <ClInclude Include="..\src\ui\KinectAligner.h" />
+    <ClInclude Include="..\src\utils\DynamicControlCalculator.h" />
+    <ClInclude Include="..\src\utils\KalmanFilter.h" />
+    <ClInclude Include="..\src\utils\MovingAverage.h" />
+    <ClInclude Include="..\src\utils\MovingPeak.h" />
+    <ClInclude Include="..\src\utils\MovingTrough.h" />
+    <ClInclude Include="..\src\utils\PeakValue.h" />
+    <ClInclude Include="..\src\utils\Profiler.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+</Project>
