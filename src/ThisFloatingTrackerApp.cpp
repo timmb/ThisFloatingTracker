@@ -649,7 +649,7 @@ int main(int argc, char* argv[])
 	cinder::app::AppBasic::prepareLaunch();
 	cinder::app::AppBasic *app = new ThisFloatingTrackerApp;
 	cinder::app::RendererRef ren(new RendererGl);
-	cinder::app::AppBasic::executeLaunch(app, ren, "This Floating World");
+	cinder::app::AppBasic::executeLaunch(app, ren, "This Floating Tracker");
 	cinder::app::AppBasic::cleanupLaunch();
 	return 0;
 }

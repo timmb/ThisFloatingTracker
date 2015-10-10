@@ -42,7 +42,7 @@
 	},
 	"Flow" : 
 	{
-		"mDrawFlow" : false,
+		"mDrawFlow" : true,
 		"mDrawRawFlow" : false,
 		"mFlowDrawScale" : 10.0,
 		"mFlowMaxLength" : 10.0,
@@ -62,7 +62,7 @@
 		"mDrawContours" : false,
 		"mDrawDepth" : false,
 		"mDrawMaskedDepth8u" : false,
-		"mDrawRawContours" : false,
+		"mDrawRawContours" : true,
 		"mDrawShapes" : false,
 		"mDrawSmoothedContourAngles" : false,
 		"mEnableContourShapes" : false,
