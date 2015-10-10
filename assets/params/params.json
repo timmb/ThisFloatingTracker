@@ -99,9 +99,9 @@
 		"Debug display" : true,
 		"Draw FPS" : true,
 		"Render target height" : 1000,
-		"Render target width" : 1000
+		"Render target width" : 1920
 	},
-	"Selected sketch" : 1,
+	"Selected sketch" : 0,
 	"Show" : 
 	{
 		"Fade change duration" : 0.7213232517242432,
@@ -111,6 +111,12 @@
 	"SkeletonFinder" : 
 	{
 		"mDrawThinnedImage" : true
+	},
+	"Staircase" : 
+	{
+		"Enable Staircase shader" : true,
+		"mNumVerticesX" : 70,
+		"mNumVerticesY" : 100
 	},
 	"UserStatsCalculator" : 
 	{

@@ -13,6 +13,7 @@
 #include "utils/MovingTrough.h"
 #include "OscTransmitter.h"
 #include "Sketch.h"
+#include "Staircase.h"
 
 using namespace ci;
 using namespace ci::app;
@@ -166,6 +167,7 @@ void ThisFloatingTrackerApp::setup()
 	pars.addParam(&mDrawFps, "Draw FPS", { "Rendering" });
 
 	// Add sketches here...
+	mSketches.push_back(make_shared<Staircase>());
 
 	CHECK_GL;
 	checkRenderTargetIsCorrectSize();

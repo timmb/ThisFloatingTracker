@@ -260,7 +260,7 @@ void Input::contourThreadFunction()
 				g.isTrackingUser = largestContour != nullptr;
 				//UserStats userStats = largestContour == nullptr ? UserStats() : mUserStatsCalculator.update(pointCloud, bodyIndex, largestContour->boundingBox);
 				//double t0 = app::getElapsedSeconds();
-				userStats.update(pointCloud, bodyIndex, maskedDepth8u, largestContour == nullptr ? cv::Rect() : largestContour->boundingBox);
+				userStats.update(pointCloud, bodyIndex, maskedDepth8u, largestContour == nullptr ? cv::Rect() : largestContour->boundingBox, timestamp);
 				//double t1 = app::getElapsedSeconds();
 				//double t = t1 - t0;
 				//trackerTimeSum += t;

@@ -17,6 +17,7 @@ public:
 	// bounding box in world coordinates.
 	ci::Vec3f lowerBound;
 	ci::Vec3f centroid;
+	ci::Vec3f centroidVel;
 	ci::Vec3f upperBound;
 	float height;
 
@@ -27,11 +28,14 @@ public:
 	/// mean distance from centre
 	float mdc;
 
+	float timestamp;
+
 	UserStats()
 		: height(0)
 		, qom(0)
 		, qomWithDecay(0)
 		, mdc(0)
+		, timestamp(0)
 	{}
 };
 
@@ -46,10 +50,11 @@ public:
 	// will assume all non-zero pixels within the bouding box belong to the user in question
 	// maskedDepth8u is CV_8UC1. All matrices should be same size and will not be modified by this class
 	// Thread safe
-	void update(cv::Mat const& pointCloud, cv::Mat const& userIndexMask, cv::Mat const& maskedDepth8u, cv::Rect const& boundingBox);
+	void update(cv::Mat const& pointCloud, cv::Mat const& userIndexMask, cv::Mat const& maskedDepth8u, cv::Rect const& boundingBox, double timestamp);
 
 	/// thread safe
 	UserStats getUserStats() const;
+	double getTimestamp() const;
 
 	// Thread safe
 	void draw();
@@ -86,6 +91,7 @@ private:
 	// ** guards:
 	cv::Mat mDifferenceImage;
 	UserStats mStats;
+	double mTimestamp;
 	KalmanFilter mQomFilter;
 	Grapher mQomGrapher;
 	Grapher mQomGrapherPreFilter;
@@ -96,7 +102,7 @@ private:
 	// INTERNAL VARS:
 	MovingAverage<cv::Mat> mMaskedDepthMovingAverage;
 
-	void updateBounds();
+	void updateBounds(double dt);
 	void updateQom();
 	void updateMdc(); ///< mean distance from center
 };

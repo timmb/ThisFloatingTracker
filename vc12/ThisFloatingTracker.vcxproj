@@ -249,6 +249,7 @@
     <ClCompile Include="..\src\Shader.cpp" />
     <ClCompile Include="..\src\ShaderPipeline.cpp" />
     <ClCompile Include="..\src\sound\MidiSender.cpp" />
+    <ClCompile Include="..\src\Staircase.cpp" />
     <ClCompile Include="..\src\ThisFloatingTrackerApp.cpp" />
     <ClCompile Include="..\src\ui\Grapher.cpp" />
     <ClCompile Include="..\src\ui\KinectAligner.cpp" />
@@ -306,6 +307,7 @@
     <ClInclude Include="..\src\ShaderPipeline.h" />
     <ClInclude Include="..\src\Sketch.h" />
     <ClInclude Include="..\src\sound\MidiSender.h" />
+    <ClInclude Include="..\src\Staircase.h" />
     <ClInclude Include="..\src\ui\Grapher.h" />
     <ClInclude Include="..\src\ui\KinectAligner.h" />
     <ClInclude Include="..\src\utils\DynamicControlCalculator.h" />

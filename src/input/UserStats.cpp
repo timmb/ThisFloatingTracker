@@ -51,7 +51,7 @@ UserStatsCalculator::~UserStatsCalculator()
 }
 
 
-void UserStatsCalculator::update(cv::Mat const& pointCloud, cv::Mat const& userIndexMask, cv::Mat const& maskedDepth8u, cv::Rect const& boundingBox)
+void UserStatsCalculator::update(cv::Mat const& pointCloud, cv::Mat const& userIndexMask, cv::Mat const& maskedDepth8u, cv::Rect const& boundingBox, double timestamp)
 {
 	assert(pointCloud.type() == CV_32FC3);
 	assert(userIndexMask.type() == CV_8UC1);
@@ -63,16 +63,19 @@ void UserStatsCalculator::update(cv::Mat const& pointCloud, cv::Mat const& userI
 	mMaskedDepth8u = maskedDepth8u;
 	mBoundingBox = boundingBox;
 
+	double dt = timestamp - mTimestamp;
+
 	float prevQomWithDecay = mStats.qomWithDecay;
 	mStats = UserStats();
 	mStats.qomWithDecay = prevQomWithDecay;
-	updateBounds();
+	updateBounds(dt);
 	updateQom();
 	updateMdc();
+	mTimestamp = timestamp;
 }
 
 
-void UserStatsCalculator::updateBounds()
+void UserStatsCalculator::updateBounds(double dt)
 {
 	if (mBoundingBox.width == 0 || mBoundingBox.height == 0
 		|| mPointCloud.rows == 0 || mPointCloud.cols == 0
@@ -116,7 +119,16 @@ void UserStatsCalculator::updateBounds()
 	}
 	if (userPixelsCount>0)
 	{
-		mStats.centroid = fromOcv(userPixelsSum) / userPixelsCount;
+		ci::Vec3f centroid = fromOcv(userPixelsSum) / userPixelsCount;
+		if (dt > 0.0000001)
+		{
+			mStats.centroidVel = (centroid - mStats.centroid) / dt;
+		}
+		else
+		{
+			mStats.centroidVel = Vec3f();
+		}
+		mStats.centroid = centroid;
 	}
 	for (int i = 0; i < 3; i++)
 	{
@@ -219,4 +231,10 @@ UserStats UserStatsCalculator::getUserStats() const
 {
 	Lock lock(mMutex);
 	return mStats;
+}
+
+double UserStatsCalculator::getTimestamp() const
+{
+	Lock lock(mMutex);
+	return mTimestamp;
 }

@@ -99,9 +99,6 @@ void Shader::bind()
 		program->uniform("mx", g.mx);
 		program->uniform("my", g.my);
 		program->uniform("qom", 0.f);
-		//program->uniform("cumulativeQom", g.cumulativeQom);
-		//program->uniform("userPosFiltered", g.userPosFiltered);
-		//program->uniform("userVel", g.userVel);
 		program->uniform("time", (float) app::getElapsedSeconds());
 		// get mvp matrix.
 		ci::Matrix44f pvm = gl::getProjection() * gl::getModelView();
